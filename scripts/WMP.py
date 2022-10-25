@@ -442,7 +442,7 @@ class WindowedMultipole(object):
         if out.broaden_poly.shape[0] != out.windows.shape[0]:
             raise ValueError(err.format('broaden_poly', 'windows'))
 
-        out.curvefit = group['curvefit'].value
+        out.curvefit = group['curvefit'][()]
         if out.curvefit.shape[0] != out.windows.shape[0]:
             raise ValueError(err.format('curvefit', 'windows'))
 
